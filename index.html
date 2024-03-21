@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ask Your Crush Out</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffe6ea; /* Soft pink background */
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    h1 {
+      color: #ff4d6d; /* Coral pink */
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #666;
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+
+    button, .no-button {
+      padding: 10px 20px;
+      background-color: #ff4d6d; /* Coral pink */
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-right: 10px; /* Add some space between buttons */
+    }
+
+    button:hover, .no-button:hover {
+      background-color: #ff3355; /* Darker coral pink on hover */
+    }
+
+    /* Animation */
+    @keyframes celebrate {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(10deg); }
+      50% { transform: rotate(-10deg); }
+      75% { transform: rotate(5deg); }
+      100% { transform: rotate(0deg); }
+    }
+    .celebrate-animation {
+      animation-name: celebrate;
+      animation-duration: 0.5s;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Ask Your Crush </h1>
+  <p>Hey dear,</p>
+  <p>Do you love me ?</p>
+  <a href="1.html"><button onclick="celebrate()">Yes, I love you too!</button></a>
+  <span class="no-button">No, sorry</span>
+  <br>
+  <img src="2.jpg" alt="Image">
+</div>
+
+<script>
+  function celebrate() {
+    // Add the celebrate-animation class to trigger the animation
+    document.querySelector('button').classList.add('celebrate-animation');
+    // Remove the class after the animation is complete (0.5s)
+    setTimeout(() => {
+      document.querySelector('button').classList.remove('celebrate-animation');
+    }, 500);
+  }
+</script>
+
+</body>
+</html>
